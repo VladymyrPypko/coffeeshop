@@ -19,10 +19,10 @@ function playPause(){
     if(count == 0){
         count = 1;
         audio.play();
-        playPauseBtn.innerHTML = "<box-icon name='volume-mute' ></box-icon>";
+        playPauseBtn.innerHTML = "<i class='bx bx-volume-full'></i>";
     } else {
         count = 0;
         audio.pause();
-        playPauseBtn.innerHTML = "<box-icon name='volume-full' ></box-icon>";
+        playPauseBtn.innerHTML = "<i class='bx bx-volume-mute'></i>";
     };
 };

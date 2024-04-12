@@ -80,6 +80,8 @@
         @include md {
             grid-row: 3;
             grid-column: 1;
+            justify-content: start;
+            margin-inline: calc($index * 2);
         }
 
         .facebook {
@@ -120,6 +122,8 @@
         @include md {
             grid-row: 4;
             grid-column: 1;
+            width: 55%;
+            margin: $index;
         }
     }
 
@@ -133,6 +137,8 @@
         @include md {
             grid-row: 5;
             grid-column: 1;
+            justify-self: left;
+            margin-left: calc($index * 2);
         }
     }
 }
