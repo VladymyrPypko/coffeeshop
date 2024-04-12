@@ -1,0 +1,97 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.navbar {
+    margin-left: 40px;
+    margin-bottom: 100px;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        -moz-column-gap: 23px;
+             column-gap: 23px;
+        margin-left: -10px;
+
+        @include md {
+            display: none;
+            margin-top: 30px;
+        }
+
+        &--active {
+            display: block;
+            @include md-min {
+                display: flex;
+            }
+        }
+    }
+    
+    &__link {
+        display: block;
+        color: $color-gray-dark;
+        padding: 20px;
+        transition: scale 0.1s, all 0.75s;;
+        cursor: pointer;
+        
+        &--active {
+            color: $color-black;
+        }
+        
+        &:focus,
+        &:hover {
+            background-color: $color-hover;
+        }
+    }
+
+    &__btn {
+        width: 30px;
+        height: 22px;
+        position: relative;
+        margin: 0;
+        transform: rotate(0deg);
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+
+        @include md-min {
+            display: none;
+        }
+
+        &.active span {
+            &:nth-child(1) {
+                top: 9px;
+                transform: rotate(135deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                left: -30px;
+            }
+
+            &:nth-child(3) {
+                top: 9px;
+                transform: rotate(-135deg);
+            }
+        }
+
+        &-row {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: $color-black;
+            border-radius: 4px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+            
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 9px;
+            }
+            &:nth-child(3) {
+                top: 18px;
+            }
+        }
+    }
+}

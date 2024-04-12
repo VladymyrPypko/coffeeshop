@@ -1,0 +1,11 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header {
+    width: calc($index * 60);
+    margin-inline: auto;
+    background-color: $color-primary;
+    padding-top: $index;
+    padding-bottom: calc($index * 0.5);
+    min-height: calc($index * 10);
+}

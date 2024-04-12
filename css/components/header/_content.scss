@@ -1,0 +1,57 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.hero-content {
+    // width: 100%;
+    // height: calc($index * 30);
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    background-image: url(../../../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__box {
+        display: grid;
+        grid-row: 3 / 3;
+        grid-column: 4 / 4;
+        min-width: 400px;
+        background-color: rgba(0, 0, 0, .3);
+        border: 2px solid transparent;
+        border-radius: 20px;
+        color: $color-primary;
+
+        @include md {
+            grid-row: 2 / 2;
+            grid-column: 2 / 2;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        white-space: nowrap;
+        margin-bottom: calc($index);
+    }
+
+    &__description {
+        margin-bottom: $index;
+    }
+
+    &__link {
+        margin-top: $index;
+        padding: calc($index * 0.5);
+        text-align: center;
+        background-color: $color-primary;
+        color: $color-gray-dark;
+        text-transform: uppercase;
+        font-size: calc($font-size - 4px);
+        font-weight: 600;
+        letter-spacing: 0.25rem;
+        transition: all 0.75s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+

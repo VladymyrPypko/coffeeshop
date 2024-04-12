@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffeeshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="libs/rain.js" defer></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <section class="layers">
+        <div class="layers__container">
+            <div class="layers__item layer-1"></div>
+            <div class="layers__item layer-2">
+                <canvas class="rain"></canvas>
+            </div>
+            <div class="layers__item layer-3">
+                <header class="header">
+                    <div class="container">
+                        <nav class="navbar">
+                            <div id="burger" class="navbar__btn">
+                                <span class="navbar__btn-row"></span
+                                >
+                                <span class="navbar__btn-row"></span
+                                >
+                                <span class="navbar__btn-row"></span>
+                            </div>
+                            <ul class="navbar__list" id="navbarList">
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__link navbar__link--active">Coffee</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__link">Products</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__link">Subscriptions</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__link">Learn</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__link">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="hero-content">
+                            <div class="hero-content__box container-sm">
+                                <h1 class="hero-content__title">Seasonal Selection</h1>
+                                <p class="hero-content__description">
+                                    Explore a curated selection of premium coffees from some of our favourite regions and producers. In season just now: El Salvador, Honduras, Burundi & more.
+                                </p>
+                                <a href="#" class="hero-content__link">View selection</a>
+                            </div>
+                          </div>
+                    </div>
+                </header>
+                <section class="main">
+                    <article class="product">
+                        <h2 class="product__title">Latest releases</h2>
+                        <div class="product__gallery">
+                            <img src="images/Gaharo.png" alt="" class="product__item">
+                            <img src="images/Fredy-Sabillon.png" alt="" class="product__item">
+                            <img src="images/Gaharo.png" alt="" class="product__item">
+                            <img src="images//Kilimanjaro.png" alt="" class="product__item">
+                            <img src="images/Kilimanjaro.png" alt="" class="product__item">
+                            <img src="images/Munyinya.png" alt="" class="product__item">
+                            <img src="images/Gaharo.png" alt="" class="product__item">
+                            <img src="images/Munyinya.png" alt="" class="product__item">
+                        </div>
+                        <a href="#" class="product__link">View all</a>
+                    </article>
+
+                    <article class="info">
+                        <img src="images/main.webp" alt="" class="info__image">
+                        <div class="info__description container-sm">
+                            <h2 class="info__title">Steeped Coffee</h2>
+                            <p class="info__text">Seasonal coffees are individually dosed, ground, and sealed in nitrogen-flushed ready-to-brew bags, maintaining the clear aromatic character of freshly ground coffee for over a year after roasting.</p>
+                            <a href="#" class="info__link">Discover more</a>
+                        </div>
+                    </article>
+
+                    <article class="media">
+                        <div class="media__box container-sm">
+                            <h2 class="media__title">Silom is now open</h2>
+                            <p class="media__text">Our first bakery in Thailand is located in the buzzing Silom district of Bangkok. Bringing our Scandinavian style of baking to Thailand has been a goal since we opened our first location in 2021. Stop by for our lineup of seasonal coffee, or to taste delicacies from the bakery.</p>
+                        </div>
+                        <div class="media__video">
+                            <video loop controls>
+                                <source src="video/video.webm">
+                            </video>
+                        </div>
+                        <div class="media__audio">
+                            <audio id="audio">
+                                <source src="audio/rain.mp3" type="audio/mpeg">
+                            </audio>
+                            <button id="playPauseBtn" onclick="playPause()"><box-icon name='volume-full' ></box-icon></button>
+                        </div>
+                    </article>
+                </section>
+
+                <footer class="footer">
+                    <h2 class="footer__title">
+                        Subscribe and get 10% off your all orders, brewing tips, early access and much more.
+                        <a href="#" class="footer__join">Join us!</a>
+                    </h2>
+                    <p class="footer__terms-privacy-policy">
+                        By signing up you agree to our 
+                        <a href="#" class="footer__terms">terms</a>
+                        and
+                        <a href="#" class="footer__privacy-policy">privacy policy.</a>
+                    </p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__link facebook">
+                            <i class='bx bxl-facebook-square' ></i>
+                        </a>
+                        <a href="#" class="footer__link instagram">
+                            <i class='bx bxl-instagram-alt' ></i>
+                        </a>
+                        <a href="#" class="footer__link twitter">
+                            <i class='bx bxl-twitter' ></i>
+                        </a>
+                        <a href="#" class="footer__link telegram">
+                            <i class='bx bxl-telegram' ></i>
+                        </a>
+                    </div>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d96709.76115249773!2d30.56266089800035!3d50.43476067399814!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1712938446660!5m2!1sru!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <p class="footer__author">2024 by Vladymyr Pypko</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

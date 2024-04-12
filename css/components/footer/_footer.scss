@@ -1,0 +1,138 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr) 50px;
+    grid-template-columns: repeat(3, 1fr);
+    width: calc($index * 60);
+    margin-inline: auto;
+    background-color: $color-footer-background;
+    color: $color-primary;
+
+    @include md {
+        grid-template-rows: repeat(3, 50px) 1fr 50px;
+        grid-template-columns: 1fr;
+    }
+
+    &__title {
+        grid-row: 1;
+        grid-column: 1;
+        margin: $index;
+        line-height: 30px;
+
+        @include md {
+            grid-row: 1;
+            grid-column: 1;
+        }
+    }
+
+    &__join {
+        justify-self: center;
+        color: $color-primary;
+        text-decoration: underline;
+        padding: calc($index * 0.7);
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            opacity: 0.6;
+        }
+    }
+
+    &__terms-privacy-policy {
+        display: flex;
+        justify-content: flex-start;
+        grid-row: 2;
+        grid-column: 1;
+        padding: calc($index * 0.7);
+        color: $color-secondary;
+
+        @include md {
+            grid-row: 2;
+            grid-column: 1;
+        }
+    }
+
+    &__terms, &__privacy-policy {
+        margin-inline: calc($index * 0.2);
+        text-decoration: underline;
+        color: $color-secondary;
+        transition: all 0.75s;
+
+        &:focus,
+        &:hover {
+            opacity: 0.7;
+            color: $color-white;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc($index * 0.5);
+        grid-row: 1;
+        grid-column: 3;
+        text-align: center;
+        font-size: calc($font-size + 1rem);
+
+        @include md {
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+        .facebook {
+            background-color: #4267b2;
+        }
+
+        .instagram {
+            background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+        }
+
+        .twitter {
+            background-color: #1da1f2;
+        }
+
+        .telegram {
+            background-color: #08c;
+        }
+    }
+
+    &__link {
+        color: $color-white;
+        padding: calc($index * 0.5);
+        border-radius: 10px;
+        transition: all 0.75s;
+
+        &:focus,
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    #map {
+        grid-row: 2;
+        grid-column: 2 / span 3;
+        width: 100%;
+        padding-inline: $index;
+
+        @include md {
+            grid-row: 4;
+            grid-column: 1;
+        }
+    }
+
+    &__author {
+        grid-row: 3;
+        grid-column: 2;
+        font-size: calc($font-size * 0.7);
+        align-self: self-end;
+        justify-self: center;
+
+        @include md {
+            grid-row: 5;
+            grid-column: 1;
+        }
+    }
+}

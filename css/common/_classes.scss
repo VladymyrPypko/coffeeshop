@@ -1,0 +1,38 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.layers {
+    perspective: 500px;
+    overflow: hidden;
+}
+
+.layers__container {
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.layers__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.layer-1 {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.layer-3 {
+    overflow-y: scroll;
+    // overflow-x: visible;
+}
+
+.container-sm {
+    max-width: 400px;
+    padding: $index;
+    line-height: 2rem;
+}

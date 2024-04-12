@@ -1,0 +1,13 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.media__video {
+    display: grid;
+    grid-row: 2;
+    grid-column: 1;
+    justify-content: center;
+    
+    video {
+        max-width: calc($index * 25);
+    }
+}
